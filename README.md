@@ -1,12 +1,48 @@
-# React + Vite
+# Scientific Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This is a **Scientific Calculator** built using **Vite, React.js, and Tailwind CSS**. It provides essential and advanced mathematical operations, following a **stack-based approach** for evaluating expressions.
 
-Currently, two official plugins are available:
+## Features
+- Basic arithmetic operations: `+`, `-`, `*`, `/`
+- Advanced functions: `sin`, `cos`, `tan`, `log`, `ln`, `√`, `π`, `e`, `^`
+- Parentheses support for order of operations
+- Delete (`DEL`) and Clear (`AC`) buttons
+- Responsive UI using **Tailwind CSS**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/ThrigunChandra/ScientificCalculator.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd ScientificCalculator
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-## Expanding the ESLint configuration
+## Usage
+- Click the buttons to enter expressions.
+- Press `=` to evaluate the input.
+- Use `AC` to clear and `DEL` to delete the last entry.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+- **Vite** for fast React development
+- **React.js** for UI components
+- **Tailwind CSS** for styling
+
+## Contributing
+Feel free to fork this repository and submit pull requests to enhance functionality.
+
+## License
+This project is licensed under the **MIT License**.
+
+---
+Made with ❤️ by ThrigunChandra
