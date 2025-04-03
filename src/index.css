@@ -1,0 +1,93 @@
+@import 'tailwindcss';
+
+
+@layer base {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  button {
+    @apply border-none outline-none appearance-none bg-transparent text-inherit;
+  }
+  body{
+    @apply text-white;
+    background-image: linear-gradient(#161616 1px, transparent 1px), linear-gradient(to right ,#161616 1px, #0f0f0f 1px);
+    background-size: 20px 20px;
+  }
+  @media (max-width: 610px){
+    body{
+      padding: 1rem;
+    }
+  }
+}
+@layer components {
+  .App{
+    @apply 
+      flex flex-col 
+      items-center 
+      gap-4
+      justify-center;
+
+    min-height: 100dvh;
+  }
+  .calc{
+    @apply border-[3px] border-white/30 rounded-[10px] max-w-[600px]
+  }
+  .displayWindow{
+    @apply flex flex-col items-end justify-end h-[120px] p-4 ;
+    backgorund-color: rgb(20, 20, 20);
+  }
+  .displayWindow .expression{
+    @apply overflow-x-hidden w-full text-right font-[600px];
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .displayWindow .result{
+    @apply text-[2.2rem] font-[600]
+  }
+  .keysWindow{
+    @apply bg-[#1d1d1d] flex p-4 gap-4;
+  }
+  .keysWindow button{
+    @apply px-[1.2rem] py-[0.8rem] text-[1.3rem] cursor-pointer border rounded-[5px];
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .keysWindow button:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .scientificKeys{
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .line{
+    margin-block: 1.5rem;
+    width:2px;
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  .basicKeys{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap:0.5rem;
+  }
+  .basicKeys .equal{
+    @apply bg-[#00ff62] text-[#0f0f0f]
+  }
+  .basicKeys .number{
+    @apply text-white font-[600]
+  }
+  @media (max-width: 610px){
+    .keysWindow{
+      flex-direction: column;
+      gap: 0;
+    }
+    .line{
+      display:none;
+    }
+    .scientificKeys{
+      width: 100%;
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}
